@@ -28,7 +28,10 @@
 				localStorage.setItem('todoItems', JSON.stringify(this.todoItems))
 			},
 			loadTodoList(){
-				this.todoItems = JSON.parse(localStorage.getItem('todoItems'))
+				var newTodoItems = JSON.parse(localStorage.getItem('todoItems'))
+				if(newTodoItems){
+					this.todoItems = newTodoItems
+				}
 			},
 			addItem(newText){
 				var newItem
