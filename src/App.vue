@@ -73,6 +73,10 @@
 		transition: 0.3s;
 	}
 
+	button{
+		font-size: 20px;
+	}
+
 	button:hover{
 		opacity: 0.8;
 	}

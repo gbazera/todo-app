@@ -2,8 +2,8 @@
     <div class="todo-item" v-bind:class="{'todo-item-checked': itemData.checked}">
         <h4><span>{{ itemData.id + 1 }}</span> {{ itemData.text }}</h4>
         <div class="buttons">
-            <button class="check" v-on:click="checkItem"><box-icon name="check" color="darkgreen"></box-icon></button>
-            <button class="remove" v-on:click="removeItem"><box-icon name="x" color="darkred"></box-icon></button>
+            <button class="check" v-on:click="checkItem"><i class='bx bx-check'></i></button>
+            <button class="remove" v-on:click="removeItem"><i class='bx bx-x'></i></button>
         </div>
     </div>
 </template>
@@ -56,10 +56,12 @@ export default{
 
     .check{
         background-color: lightgreen;
+        color: darkgreen;
     }
 
     .remove{
         background-color: lightcoral;
+        color: darkred;
     }
 
     span{

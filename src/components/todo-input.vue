@@ -1,7 +1,7 @@
 <template>
     <div class="todo-input">
         <input type="text" v-model="inputText">
-        <button type="submit"><box-icon name="plus" color="darkgreen" v-on:click="addItem"></box-icon></button>
+        <button type="submit" v-on:click="addItem"><i class='bx bx-plus'></i></button>
     </div>
 </template>
 
@@ -52,6 +52,7 @@ export default{
         width: 40px;
         border-radius: 0px 5px 5px 0px;
         background-color: lightgreen;
+        color: darkgreen;
         cursor: pointer;
     }
 </style>
