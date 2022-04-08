@@ -6,8 +6,8 @@
 </template>
 
 <script>
-	import TodoInput from '@/components/todo-input.vue'
-	import TodoItem from '@/components/todo-item.vue'
+	import TodoInput from './components/todo-input.vue'
+	import TodoItem from './components/todo-item.vue'
 
 	export default {
 		name: "App",
