@@ -36,7 +36,7 @@ export default{
         },
         editItem : function(){
             if(this.itemData.checked) return
-            
+
 			if(this.canEdit){
 				this.canEdit = false
 				this.$refs.input.disabled = true
@@ -49,6 +49,7 @@ export default{
 			}
         },
         checkItem : function(){
+            if(this.canEdit) return
             this.$emit('checkItem', this.itemData)
         },
         removeItem : function(){
