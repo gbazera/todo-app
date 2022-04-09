@@ -66,10 +66,8 @@
 		text-align: center;
 		color: #2c3e50;
 		width: 500px;
-		position: absolute;
-		transform: translate(-50%, -50%);
-		top: 50%;
-		left: 50%;
+		margin: auto;
+		margin-top: 100px;
 	}
 
 	*{
@@ -82,5 +80,27 @@
 
 	button:hover{
 		opacity: 0.8;
+	}
+
+	@media screen and (max-width: 900px){
+		#app{
+			width: 100%;
+		}
+
+		h1{
+			font-size: 20px !important;
+		}
+
+		h3{
+			font-size: 16px !important;
+		}
+
+		h4{
+			font-size: 12px !important;
+		}
+
+		h4 span{
+			font-size: 14px !important;
+		}
 	}
 </style>

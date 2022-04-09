@@ -1,8 +1,8 @@
 <template>
-    <div class="todo-input">
+    <form class="todo-input" onsubmit="return false">
         <input type="text" v-model="inputText">
         <button type="submit" v-on:click="addItem"><i class='bx bx-plus'></i></button>
-    </div>
+    </form>
 </template>
 
 <script>
@@ -22,6 +22,7 @@ export default{
                 return
             }
             this.$emit('addItem', this.inputText)
+            this.inputText = ''
         }
     },
 }
