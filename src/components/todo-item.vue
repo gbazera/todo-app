@@ -82,6 +82,10 @@ export default{
 		outline: none;
     }
 
+    input:focus{
+        border-bottom: 1px #2c3e50 solid;
+    }
+
     button{
         border: none;
         cursor: pointer;
