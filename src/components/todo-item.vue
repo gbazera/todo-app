@@ -35,6 +35,8 @@ export default{
             this.$emit('saveItem', this.itemData, this.inputText)
         },
         editItem : function(){
+            if(this.itemData.checked) return
+            
 			if(this.canEdit){
 				this.canEdit = false
 				this.$refs.input.disabled = true
