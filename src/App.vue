@@ -2,7 +2,7 @@
 	<h1>TODO LIST</h1>
 	<TodoInput @addItem="addItem"/>
 	<h3 v-if="todoItems.length <= 0">Todo list is empty.</h3>
-	<TodoItem v-for="(item, index) in todoItems" :key="index" :itemData="item" @removeItem="removeItem" @checkItem="checkItem"/>
+	<TodoItem v-for="(item, index) in todoItems" :key="index" :itemData="item" @removeItem="removeItem" @checkItem="checkItem" @saveItem="updateItem"/>
 </template>
 
 <script>
@@ -49,6 +49,10 @@
 			},
 			removeItem(i){
 				this.todoItems = this.todoItems.filter(todo => todo.id !== i)
+				this.updateTodoList()
+			},
+			updateItem(item, newText){
+				item.text = newText
 				this.updateTodoList()
 			}
 		},

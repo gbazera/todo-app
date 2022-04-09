@@ -1,6 +1,6 @@
 <template>
     <form class="todo-input" onsubmit="return false">
-        <input type="text" v-model="inputText">
+        <input type="text" v-model="inputText" autofocus>
         <button type="submit" v-on:click="addItem"><i class='bx bx-plus'></i></button>
     </form>
 </template>
@@ -17,7 +17,6 @@ export default{
     },
     methods: {
         addItem(){
-            console.log(this.inputText)
             if (this.inputText === ''){
                 return
             }

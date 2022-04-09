@@ -1,7 +1,11 @@
 <template>
     <div class="todo-item" v-bind:class="{'todo-item-checked': itemData.checked}">
-        <h4><span>{{ itemData.id + 1 }}</span> {{ itemData.text }}</h4>
-        <div class="buttons">
+        <div class="left">
+            <span>{{ itemData.id + 1 }}</span>
+            <input type="text" v-model="inputText" ref="input">
+        </div>
+        <div class="right">
+            <button class="edit" v-bind:class="{'edit-active': canEdit}" v-on:click="editItem"><i class='bx bx-edit-alt'></i></button>
             <button class="check" v-on:click="checkItem"><i class='bx bx-check'></i></button>
             <button class="remove" v-on:click="removeItem"><i class='bx bx-x'></i></button>
         </div>
@@ -16,7 +20,32 @@ export default{
             required: true,
         }
     },
+    data() {
+        return {
+            inputText: this.itemData.text,
+			canEdit: false
+        }
+    },
+	mounted() {
+		this.$refs.input.disabled = true
+		this.$refs.input.blur()
+	},
     methods: {
+        saveItem : function(){
+            this.$emit('saveItem', this.itemData, this.inputText)
+        },
+        editItem : function(){
+			if(this.canEdit){
+				this.canEdit = false
+				this.$refs.input.disabled = true
+				this.$refs.input.blur()
+				this.saveItem()
+			}else{
+				this.canEdit = true
+				this.$refs.input.disabled = false
+				this.$refs.input.focus()
+			}
+        },
         checkItem : function(){
             this.$emit('checkItem', this.itemData)
         },
@@ -33,7 +62,8 @@ export default{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 2px #2c3e50 solid;
+        border-bottom: 2px #2c3e5020 solid;
+        padding: 10px;
     }
 
     .todo-item:last-of-type{
@@ -45,6 +75,13 @@ export default{
         text-decoration: line-through;
     }
 
+    input{
+        font-size: 18px;
+        color: #2c3e50;
+        border: none;
+		outline: none;
+    }
+
     button{
         border: none;
         cursor: pointer;
@@ -53,6 +90,16 @@ export default{
         border-radius: 5px;
         margin-left: 5px;
     }
+
+    .edit{
+        background-color: lightsteelblue;
+        color: darkslategray;
+    }
+
+	.edit-active{
+		background-color: slategray;
+		color: whitesmoke;
+	}
 
     .check{
         background-color: lightgreen;
