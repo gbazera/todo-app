@@ -69,23 +69,29 @@
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: #2c3e50;
-		width: 600px;
+		width: 650px;
+		padding: 20px;
+		border-radius: 5px;
 		margin: auto;
 		margin-top: 100px;
+		background-color: #ffffffaa;
 	}
 
 	*{
-		transition: 0.3s;
+		transition: 0.5s;
 	}
 
 	body{
-		background-color: #8BC6EC;
-		background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+		background: linear-gradient(135deg, #8BC6EC, #9599E2);
 	}
 
 	button{
 		font-size: 18px !important;
 	} 
+
+	h1{
+		margin-bottom: 15px;
+	}
 
 	@media screen and (max-width: 900px){
 		#app{

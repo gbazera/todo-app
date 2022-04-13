@@ -45,6 +45,8 @@ export default{
         font-size: 18px;
         margin: 0;
         border-right: none;
+        background-color: white;
+        border-color: transparent;
     }
 
     button{
