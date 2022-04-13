@@ -1,5 +1,6 @@
 <template>
     <div class="todo-item" v-bind:class="{'todo-item-checked': itemData.checked}">
+        <button></button>
         <div class="left">
             <span>{{ itemData.id + 1 }}</span>
             <input type="text" v-model="inputText" ref="input">
