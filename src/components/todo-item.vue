@@ -5,7 +5,7 @@
             <input type="text" v-model="inputText" ref="input">
         </div>
         <div class="right">
-            <button class="edit btn btn-primary btn-sqr" v-bind:class="{'edit-active': canEdit}" v-on:click="editItem"><i class='bx bx-edit-alt'></i></button>
+            <button class="edit btn btn-sqr" v-bind:class="{'btn-primary-outline': canEdit, 'btn-primary': !canEdit}" v-on:click="editItem"><i class='bx bx-edit-alt'></i></button>
             <button class="check btn btn-success btn-sqr" v-on:click="checkItem"><i class='bx bx-check'></i></button>
             <button class="remove btn btn-danger btn-sqr" v-on:click="removeItem"><i class='bx bx-x'></i></button>
         </div>
@@ -79,7 +79,7 @@ export default{
     }
 
     input{
-        font-size: 18px;
+        font-size: 20px;
         color: #2c3e50;
         border: none;
 		outline: none;
