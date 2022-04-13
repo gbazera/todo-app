@@ -69,7 +69,7 @@
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
 		color: #2c3e50;
-		width: 500px;
+		width: 600px;
 		margin: auto;
 		margin-top: 100px;
 	}
@@ -79,12 +79,8 @@
 	}
 
 	button{
-		font-size: 20px;
-	}
-
-	button:hover{
-		opacity: 0.8;
-	}
+		font-size: 18px !important;
+	} 
 
 	@media screen and (max-width: 900px){
 		#app{

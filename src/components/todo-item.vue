@@ -5,9 +5,9 @@
             <input type="text" v-model="inputText" ref="input">
         </div>
         <div class="right">
-            <button class="edit btn btn-primary btn-s" v-bind:class="{'edit-active': canEdit}" v-on:click="editItem"><i class='bx bx-edit-alt'></i></button>
-            <button class="check btn btn-success btn-s" v-on:click="checkItem"><i class='bx bx-check'></i></button>
-            <button class="remove btn btn-danger btn-s" v-on:click="removeItem"><i class='bx bx-x'></i></button>
+            <button class="edit btn btn-primary btn-sqr" v-bind:class="{'edit-active': canEdit}" v-on:click="editItem"><i class='bx bx-edit-alt'></i></button>
+            <button class="check btn btn-success btn-sqr" v-on:click="checkItem"><i class='bx bx-check'></i></button>
+            <button class="remove btn btn-danger btn-sqr" v-on:click="removeItem"><i class='bx bx-x'></i></button>
         </div>
     </div>
 </template>
@@ -83,10 +83,16 @@ export default{
         color: #2c3e50;
         border: none;
 		outline: none;
+        margin-left: 5px;
     }
 
     input:focus{
         border-bottom: 1px #2c3e50 solid;
+    }
+
+    button{
+        margin: 0;
+        margin-left: 5px;
     }
 
     /* button{

@@ -1,7 +1,7 @@
 <template>
     <form class="todo-input" onsubmit="return false">
-        <input type="text" v-model="inputText" autofocus>
-        <button type="submit" v-on:click="addItem"><i class='bx bx-plus'></i></button>
+        <input class="inp inp-s" type="text" v-model="inputText" autofocus>
+        <button class="btn btn-sqr btn-success" type="submit" v-on:click="addItem"><i class='bx bx-plus'></i></button>
     </form>
 </template>
 
@@ -34,25 +34,21 @@ export default{
         margin-bottom: 10px;
     }
 
-    input, button{
+    /* input, button{
         border: none;
-    }
+    } */
 
     input{
-        background-color: gainsboro;
         width: 100%;
         border-radius: 5px 0px 0px 5px;
         padding: 10px;
         font-size: 18px;
-        color: #2c3e50;
-        outline: none;
+        margin: 0;
+        border-right: none;
     }
 
     button{
-        width: 40px;
         border-radius: 0px 5px 5px 0px;
-        background-color: lightgreen;
-        color: darkgreen;
-        cursor: pointer;
+        margin: 0;
     }
 </style>
