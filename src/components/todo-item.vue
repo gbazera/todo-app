@@ -5,9 +5,9 @@
             <input type="text" v-model="inputText" ref="input">
         </div>
         <div class="right">
-            <button class="edit btn btn-primary" v-bind:class="{'edit-active': canEdit}" v-on:click="editItem"><i class='bx bx-edit-alt'></i></button>
-            <button class="check" v-on:click="checkItem"><i class='bx bx-check'></i></button>
-            <button class="remove" v-on:click="removeItem"><i class='bx bx-x'></i></button>
+            <button class="edit btn btn-primary btn-s" v-bind:class="{'edit-active': canEdit}" v-on:click="editItem"><i class='bx bx-edit-alt'></i></button>
+            <button class="check btn btn-success btn-s" v-on:click="checkItem"><i class='bx bx-check'></i></button>
+            <button class="remove btn btn-danger btn-s" v-on:click="removeItem"><i class='bx bx-x'></i></button>
         </div>
     </div>
 </template>
