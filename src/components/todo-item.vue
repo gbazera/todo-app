@@ -5,7 +5,7 @@
             <input type="text" v-model="inputText" ref="input">
         </div>
         <div class="right">
-            <button class="edit" v-bind:class="{'edit-active': canEdit}" v-on:click="editItem"><i class='bx bx-edit-alt'></i></button>
+            <button class="edit btn btn-primary" v-bind:class="{'edit-active': canEdit}" v-on:click="editItem"><i class='bx bx-edit-alt'></i></button>
             <button class="check" v-on:click="checkItem"><i class='bx bx-check'></i></button>
             <button class="remove" v-on:click="removeItem"><i class='bx bx-x'></i></button>
         </div>
@@ -89,7 +89,7 @@ export default{
         border-bottom: 1px #2c3e50 solid;
     }
 
-    button{
+    /* button{
         border: none;
         cursor: pointer;
         width: 40px;
@@ -116,7 +116,7 @@ export default{
     .remove{
         background-color: lightcoral;
         color: darkred;
-    }
+    } */
 
     span{
         font-size: 32px;
