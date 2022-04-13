@@ -7,7 +7,7 @@
         <div class="right">
             <button class="edit btn btn-sqr" v-bind:class="{'btn-primary-outline': canEdit, 'btn-primary': !canEdit}" v-on:click="editItem"><i class='bx bx-edit-alt'></i></button>
             <button class="check btn btn-success btn-sqr" v-on:click="checkItem"><i class='bx bx-check'></i></button>
-            <button class="remove btn btn-danger btn-sqr" v-on:click="removeItem"><i class='bx bx-x'></i></button>
+            <button class="remove btn btn-danger btn-sqr" v-on:click="removeItem"><i class='bx bx-trash'></i></button>
         </div>
     </div>
 </template>
